@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'GeneralSans';
+    src: url('./fonts/GeneralSans-Regular.ttf') format('truetype'),
+        url('./fonts/GeneralSans-Medium.ttf') format('truetype'),
+        url('./fonts/GeneralSans-Semibold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'MADEOuterSans';
+    src: url('./fonts/MADEOuterSans-Medium.ttf') format('truetype');
+}
+
+$regular-weight: 400;
+$medium-weight: 500;
+$semibold-weight: 600;
