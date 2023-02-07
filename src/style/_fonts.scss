@@ -1,8 +1,17 @@
 @font-face {
-    font-family: 'GeneralSans';
-    src: url('./fonts/GeneralSans-Regular.ttf') format('truetype'),
-        url('./fonts/GeneralSans-Medium.ttf') format('truetype'),
-        url('./fonts/GeneralSans-Semibold.ttf') format('truetype');
+    font-family: 'GeneralSans-regular';
+    src: url('./fonts/GeneralSans-Regular.woff2') format('woff2')
+}
+
+@font-face {
+    font-family: 'GeneralSans-medium';
+    src: url('./fonts/GeneralSans-Medium.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'GeneralSans-semibold';
+    src: url('./fonts/GeneralSans-Semibold.woff2') format('woff2');
+
 }
 
 @font-face {

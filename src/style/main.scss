@@ -16,7 +16,7 @@ html {
 }
 
 body {
-    font-family: 'GeneralSans', sans-serif;
+    font-family: 'GeneralSans-Medium', sans-serif;
     line-height: 1;
     background-color: $bgc-white;
     color: $text-black;
@@ -28,6 +28,7 @@ p {
 
 a {
     text-decoration: none;
+    color: $text-black;
 }
 
 
@@ -36,4 +37,9 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
 }
