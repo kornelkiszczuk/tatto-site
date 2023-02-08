@@ -21,7 +21,6 @@ body {
     line-height: 1;
     background-color: $bgc-white;
     color: $text-black;
-    overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -48,6 +47,7 @@ a {
 
 main {
     scroll-snap-type: y mandatory;
+    overflow-x: hidden;
 }
 
 main,
@@ -61,7 +61,7 @@ nav {
     }
 
     @media (max-width:725px) {
-        padding-inline: 2.9rem;
+        padding-inline: 1.8rem;
     }
 }
 

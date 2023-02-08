@@ -17,7 +17,6 @@
     </section>
 </template>
 
-
 <style lang="scss" scoped>
 .slogan {
     display: flex;
@@ -29,8 +28,12 @@
     &__title {
         font-family: 'MADEOuterSans';
         color: $text-black;
-        font-size: clamp(1.875rem, 1.128rem + 4.2683vw, 6.25rem);
+        font-size: clamp(1.875rem, 1.1544rem + 4.1176vw, 6.25rem);
         margin-bottom: 5rem;
+
+        @media (max-width:576px) {
+            margin-bottom: 2.5rem;
+        }
 
         span {
             position: relative;
@@ -49,8 +52,6 @@
                 background-color: $primary-color;
             }
 
-
-
             &:nth-of-type(2)::after {
                 left: -7px;
                 width: 1000%;
@@ -61,7 +62,7 @@
 
     &__aside {
         .aside-item {
-            font-size: clamp(1.125rem, 1.0823rem + 0.2439vw, 1.375rem);
+            font-size: clamp(0.8125rem, 0.7165rem + 0.5488vw, 1.375rem);
             line-height: 3.3rem;
 
             span {
@@ -86,8 +87,6 @@
         .aside-item:nth-last-child(1) {
             font-family: "GeneralSans-semibold";
         }
-
-
     }
 
 }

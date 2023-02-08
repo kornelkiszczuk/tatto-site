@@ -106,10 +106,15 @@ header {
     background-color: $bgc-white;
 
     .navbar {
+        // height: 11.4rem;
         display: flex;
         justify-content: space-between;
         padding-block-start: 5.8rem;
         padding-block-end: 1rem;
+
+        @media (max-width:1100px) {
+            padding-block-start: 3rem;
+        }
 
 
         &__logo {
