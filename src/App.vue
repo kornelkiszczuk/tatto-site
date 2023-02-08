@@ -7,6 +7,8 @@ import Nav from './components/Nav.vue';
   <Nav />
   <main>
     <Hero />
+
+
   </main>
 </template>
 

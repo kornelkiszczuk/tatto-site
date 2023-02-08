@@ -4,50 +4,54 @@
 
 <template>
     <section class="slogan">
-        <h1 class="slogan__title"><span>Tatuażysta</span><br />
-Czy to Twój pomysł na wyjątkową<br /> pracę? Jeśli tak, to wiesz, że <span>talent</span>,<br /> energia i zasoby potrzebują<br /> przestrzeni do nauki i rozwoju.</h1>
-        <div class="slogan__aside">
-            <p>odkryj nasz pomysł na tAKĄ PRZESTRZEŃ.</p>
-            <p>WITAJ W AKADEMII TATUAŻU INQ TATOO SCHOOL</p>
+        <div class="slogan__text-container">
+            <h1 class="slogan__title"><span>Tatuażysta</span><br />
+                Czy to Twój pomysł na wyjątkową<br /> pracę? Jeśli tak, to wiesz, że <span>talent</span>,<br /> energia
+                i
+                zasoby potrzebują<br /> przestrzeni do nauki i rozwoju.</h1>
+            <div class="slogan__aside">
+                <p class="aside-item">odkryj nasz pomysł na <span>tAKĄ PRZESTRZEŃ.</span></p>
+                <p class="aside-item">WITAJ W AKADEMII TATUAŻU INQ TATOO SCHOOL</p>
+            </div>
         </div>
     </section>
 </template>
 
 
 <style lang="scss" scoped>
-
 .slogan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-transform: uppercase;
+
+
     &__title {
         font-family: 'MADEOuterSans';
-        margin-top: 20rem;
         color: $text-black;
-        font-size: clamp(2.8125rem, 2.1723rem + 3.6585vw, 6.5625rem);
-    
-        @media (max-width: 1100px) {
-            margin-top: 13rem;
-        }
+        font-size: clamp(1.875rem, 1.128rem + 4.2683vw, 6.25rem);
+        margin-bottom: 5rem;
 
         span {
             position: relative;
 
             &::after {
                 position: absolute;
+                top: 4px;
+                bottom: 3px;
                 z-index: -5;
+
             }
 
             &:nth-of-type(1)::after {
-                top: 4px;
-                bottom: 3px;
                 right: -7px;
                 width: 1000%;
                 background-color: $primary-color;
             }
 
-      
+
 
             &:nth-of-type(2)::after {
-                top: 4px;
-                bottom: 3px;
                 left: -7px;
                 width: 1000%;
                 background-color: $secondary-color;
@@ -55,8 +59,36 @@ Czy to Twój pomysł na wyjątkową<br /> pracę? Jeśli tak, to wiesz, że <spa
         }
     }
 
-    // &__aside {}
+    &__aside {
+        .aside-item {
+            font-size: clamp(1.125rem, 1.0823rem + 0.2439vw, 1.375rem);
+            line-height: 3.3rem;
+
+            span {
+                position: relative;
+
+                &::after {
+                    position: absolute;
+                    top: 0px;
+                    bottom: 0px;
+                    left: -3px;
+                    right: -3px;
+                    z-index: -5;
+                    background-color: $primary-color;
+                }
+            }
+        }
+
+        .aside-item:nth-child(1) {
+            font-family: 'GeneralSans-regular';
+        }
+
+        .aside-item:nth-last-child(1) {
+            font-family: "GeneralSans-semibold";
+        }
+
+
+    }
 
 }
-
 </style>

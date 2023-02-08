@@ -108,16 +108,15 @@ header {
     .navbar {
         display: flex;
         justify-content: space-between;
-        padding: 5.8rem 0 1.1rem;
+        padding-block-start: 5.8rem;
+        padding-block-end: 1rem;
 
-        @media (max-width:1100px) {
-            padding: 3.5rem 1.3rem 1.1rem;
-        }
 
         &__logo {
-                mix-blend-mode: difference;
+            mix-blend-mode: difference;
+
             img {
-                
+
                 width: 191px;
                 height: 59px;
             }
