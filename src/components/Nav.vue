@@ -100,22 +100,24 @@ window.onresize = changeBetweenDevices;
 <style lang="scss" scoped>
 header {
     position: fixed;
+    top: 0;
     width: 100%;
+    z-index: 50;
     background-color: $bgc-white;
 
     .navbar {
         display: flex;
         justify-content: space-between;
-        padding: 5.8rem 7.6rem 1.1rem;
+        padding: 5.8rem 0 1.1rem;
 
         @media (max-width:1100px) {
-            padding: 3.5rem 3.5rem 1.1rem;
+            padding: 3.5rem 1.3rem 1.1rem;
         }
 
         &__logo {
-            mix-blend-mode: difference;
-
+                mix-blend-mode: difference;
             img {
+                
                 width: 191px;
                 height: 59px;
             }
@@ -138,6 +140,7 @@ header {
                 text-transform: uppercase;
                 color: $text-black;
                 font-weight: $medium-weight;
+
             }
         }
 
