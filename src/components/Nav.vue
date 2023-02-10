@@ -106,7 +106,6 @@ header {
     background-color: $bgc-white;
 
     .navbar {
-        // height: 11.4rem;
         display: flex;
         justify-content: space-between;
         padding-block-start: 5.8rem;

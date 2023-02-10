@@ -3,7 +3,9 @@
 </script>
 
 <template>
-    <section class="news">dwadaw</section>
+    <div class="section">
+        <section class="news">dwadaw</section>
+    </div>
 </template>
 
 <style lang="scss" scoped>

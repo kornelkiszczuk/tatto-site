@@ -297,6 +297,11 @@ fsevents@~2.3.2:
   resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.3.2.tgz#8a526f78b8fdf4623b709e0b975c52c24c02fd1a"
   integrity sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==
 
+fullpage.js@^4.0.16:
+  version "4.0.16"
+  resolved "https://registry.yarnpkg.com/fullpage.js/-/fullpage.js-4.0.16.tgz#e6d58f8eec9c167ca7b3802fc3811e4507a31f6b"
+  integrity sha512-Xj/9eq8QSRvdy8LkHQOG4T4XbQXgHkmgKBEbF14/Erk3tN8AQED4WVBrEycn4Dr8jXzoTk7AWHzr9yhuQ8N1yQ==
+
 function-bind@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
@@ -463,6 +468,13 @@ vite@^4.1.0:
     rollup "^3.10.0"
   optionalDependencies:
     fsevents "~2.3.2"
+
+vue-fullpage.js@^0.2.11:
+  version "0.2.11"
+  resolved "https://registry.yarnpkg.com/vue-fullpage.js/-/vue-fullpage.js-0.2.11.tgz#decc4ff63c3e4968c4e0efcfd2cf618e7eb7e609"
+  integrity sha512-vlNfe4s1pOXYkH8Gl0vxe/cCcEG690+H2k/LQZcPWTfPXZgt4Dg+gdnXBECB3T0n/u5bI4gyUMJhASTZkAuUew==
+  dependencies:
+    fullpage.js "^4.0.16"
 
 vue@^3.2.45:
   version "3.2.47"

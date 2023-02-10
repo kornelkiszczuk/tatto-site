@@ -13,7 +13,6 @@
 
 html {
     font-size: 62.5%;
-    scroll-snap-type: y mandatory;
 }
 
 body {
@@ -46,7 +45,6 @@ a {
 }
 
 main {
-    scroll-snap-type: y mandatory;
     overflow-x: hidden;
 }
 
@@ -67,7 +65,8 @@ nav {
 
 section {
     height: 100vh;
-    scroll-snap-align: start;
+    // overflow-x: hidden;
+
 }
 
 span {

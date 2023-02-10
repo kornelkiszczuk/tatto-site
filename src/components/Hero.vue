@@ -3,32 +3,39 @@
 </script>
 
 <template>
-    <section class="slogan">
-        <div class="slogan__text-container">
-            <h1 class="slogan__title"><span>Tatuażysta</span><br />
-                Czy to Twój pomysł na wyjątkową<br /> pracę? Jeśli tak, to wiesz, że <span>talent</span>,<br /> energia
-                i
-                zasoby potrzebują<br /> przestrzeni do nauki i rozwoju.</h1>
-            <div class="slogan__aside">
-                <p class="aside-item">odkryj nasz pomysł na <span>tAKĄ PRZESTRZEŃ.</span></p>
-                <p class="aside-item">WITAJ W AKADEMII TATUAŻU INQ TATOO SCHOOL</p>
+    <div class="section">
+        <section class="slogan">
+            <div class="slogan__text-container">
+                <h1 class="slogan__title"><span>Tatuażysta</span><br />
+                    Czy to Twój pomysł na wyjątkową<br /> pracę? Jeśli tak, to wiesz, że <span>talent</span>,<br />
+                    energia
+                    i
+                    zasoby potrzebują<br /> przestrzeni do nauki i rozwoju.</h1>
+                <div class="slogan__aside">
+                    <p class="aside-item">odkryj nasz pomysł na <span>tAKĄ PRZESTRZEŃ.</span></p>
+                    <p class="aside-item">WITAJ W AKADEMII TATUAŻU INQ TATOO SCHOOL</p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 </template>
 
 <style lang="scss" scoped>
 .slogan {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     text-transform: uppercase;
+    padding-top: 20rem;
 
+    @media (max-width:1100px) {
+        padding-top: 11.4rem;
+    }
 
     &__title {
         font-family: 'MADEOuterSans';
         color: $text-black;
-        font-size: clamp(1.875rem, 1.1544rem + 4.1176vw, 6.25rem);
+        // font-size: clamp(1.875rem, 1.1544rem + 4.1176vw, 6.25rem);
+        font-size: clamp(2.1875rem, 1.4939rem + 3.9634vw, 6.25rem);
         margin-bottom: 5rem;
 
         @media (max-width:576px) {
@@ -54,7 +61,7 @@
 
             &:nth-of-type(2)::after {
                 left: -7px;
-                width: 1000%;
+                width: 203%;
                 background-color: $secondary-color;
             }
         }
@@ -62,8 +69,13 @@
 
     &__aside {
         .aside-item {
-            font-size: clamp(0.8125rem, 0.7165rem + 0.5488vw, 1.375rem);
-            line-height: 3.3rem;
+            // font-size: clamp(0.8125rem, 0.7165rem + 0.5488vw, 1.375rem);
+            font-size: clamp(0.875rem, 0.6509rem + 1.2805vw, 2.1875rem);
+            line-height: 2.9rem;
+
+            @media (max-width:576px) {
+                line-height: 1.5rem;
+            }
 
             span {
                 position: relative;
