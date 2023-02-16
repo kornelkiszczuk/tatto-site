@@ -73,8 +73,8 @@ window.onresize = changeBetweenDevices;
                     </a>
                 </div>
                 <div class="navbar__contact flex-col">
-                    <a href="mailto:KONTAKT.INQ@GMAIL.COM">KONTAKT.INQ@GMAIL.COM</a>
-                    <a href="tel:601-150-899">+48 601 150 899</a>
+                    <a class="contact-item" href="mailto:KONTAKT.INQ@GMAIL.COM">KONTAKT.INQ@GMAIL.COM</a>
+                    <a class="contact-item" href="tel:601-150-899">+48 601 150 899</a>
                 </div>
             </div>
             <div @click="toogleMobileNav" v-show="mobile" class="navbar__burger">
@@ -103,21 +103,18 @@ header {
     top: 0;
     width: 100%;
     z-index: 50;
-    background-color: $bgc-white;
+    mix-blend-mode: difference;
 
     .navbar {
         display: flex;
         justify-content: space-between;
-        padding-block-start: 5.8rem;
-        padding-block-end: 1rem;
+        padding-block: 5.8rem 1rem;
 
         @media (max-width:1100px) {
             padding-block-start: 3rem;
         }
 
-
         &__logo {
-            mix-blend-mode: difference;
 
             img {
 
@@ -131,17 +128,15 @@ header {
             gap: 2.8rem;
         }
 
-        &__contact,
+        &__contact .contact-item,
         &__navigation .nav-link {
             line-height: 1.9rem;
             font-size: 1.4rem;
         }
 
         &__navigation {
-
             .nav-link {
                 text-transform: uppercase;
-                color: $text-black;
                 font-weight: $medium-weight;
 
             }
@@ -150,10 +145,10 @@ header {
         &__burger {
             align-self: center;
             font-size: 2.3rem;
-            mix-blend-mode: difference;
-            color: $white;
             z-index: 20;
             cursor: pointer;
+            mix-blend-mode: difference;
+            color: white;
         }
 
         &__dropdown-nav {
@@ -165,6 +160,7 @@ header {
             left: 0;
             background-color: #000;
             z-index: 10;
+            mix-blend-mode: normal;
 
             .mobile-nav {
                 align-items: center;
