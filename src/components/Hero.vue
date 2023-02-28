@@ -36,6 +36,8 @@
 
         span {
             position: relative;
+            z-index: -1;
+
 
             &::after {
                 position: absolute;
@@ -70,6 +72,7 @@
 
             span {
                 position: relative;
+                z-index: -1;
 
                 &::after {
                     position: absolute;
@@ -83,12 +86,12 @@
             }
         }
 
-        .aside-item:nth-child(1) {
-            font-family: 'GeneralSans-regular';
+        .aside-item {
+            font-family: 'GeneralSans';
         }
 
         .aside-item:nth-last-child(1) {
-            font-family: "GeneralSans-semibold";
+            font-weight: $semibold-weight;
         }
     }
 

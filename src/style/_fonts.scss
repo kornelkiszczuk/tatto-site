@@ -1,15 +1,18 @@
 @font-face {
-    font-family: 'GeneralSans-regular';
+    font-family: 'GeneralSans';
+    font-weight: 400;
     src: url('./fonts/GeneralSans-Regular.woff2') format('woff2')
 }
 
 @font-face {
-    font-family: 'GeneralSans-medium';
+    font-family: 'GeneralSans';
+    font-weight: 500;
     src: url('./fonts/GeneralSans-Medium.woff2') format('woff2');
 }
 
 @font-face {
-    font-family: 'GeneralSans-semibold';
+    font-family: 'GeneralSans';
+    font-weight: 600;
     src: url('./fonts/GeneralSans-Semibold.woff2') format('woff2');
 
 }

@@ -62,7 +62,7 @@ window.onresize = changeBetweenDevices;
 
 
 <template>
-    <header>
+    <header class="desktop-header">
         <nav class="navbar">
             <div class="navbar__logo">
                 <a href="#"><img src="../assets/logo.svg" alt="logo"></a>
@@ -81,8 +81,13 @@ window.onresize = changeBetweenDevices;
                 <i v-if="!mobileNav" class="fa-solid fa-bars"></i>
                 <i v-else class="fa-sharp fa-solid fa-xmark"></i>
             </div>
+
+        </nav>
+    </header>
+    <header class="mobile-header">
+        <nav class="navbar-mobile">
             <Transition name="mobile-nav">
-                <div v-show="mobileNav" class="navbar__dropdown-nav flex-col">
+                <div v-show="mobileNav" class="navbar-mobile__dropdown-nav flex-col">
                     <div class="mobile-nav flex-col">
                         <a class="nav-link" v-for="link in navigation" :key="link.id" :href="link.path">{{ link.title }}
                         </a>
@@ -98,7 +103,7 @@ window.onresize = changeBetweenDevices;
 </template>
 
 <style lang="scss" scoped>
-header {
+.desktop-header {
     position: fixed;
     top: 0;
     width: 100%;
@@ -132,6 +137,9 @@ header {
         &__navigation .nav-link {
             line-height: 1.9rem;
             font-size: 1.4rem;
+            mix-blend-mode: difference;
+            color: $text-black;
+            filter: invert(1);
         }
 
         &__navigation {
@@ -147,10 +155,15 @@ header {
             font-size: 2.3rem;
             z-index: 20;
             cursor: pointer;
-            mix-blend-mode: difference;
             color: white;
-        }
+            mix-blend-mode: difference;
 
+        }
+    }
+}
+
+.mobile-header {
+    .navbar-mobile {
         &__dropdown-nav {
             justify-content: center;
             position: fixed;
@@ -159,8 +172,6 @@ header {
             top: 0;
             left: 0;
             background-color: #000;
-            z-index: 10;
-            mix-blend-mode: normal;
 
             .mobile-nav {
                 align-items: center;
@@ -189,7 +200,6 @@ header {
             }
         }
 
-
         // transitions 
         .mobile-nav-enter-active,
         .mobile-nav-leave-active {
@@ -203,7 +213,6 @@ header {
         .mobile-nav-leave-to {
             opacity: 0;
         }
-
     }
 }
 </style>
