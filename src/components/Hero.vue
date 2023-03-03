@@ -23,6 +23,9 @@
     text-transform: uppercase;
     margin-bottom: 10rem;
 
+    @media (max-width:576px) {
+        margin-bottom: 2rem;
+    }
 
     &__title {
         font-family: 'MADEOuterSans';
@@ -36,8 +39,6 @@
 
         span {
             position: relative;
-            z-index: -1;
-
 
             &::after {
                 position: absolute;
@@ -72,7 +73,6 @@
 
             span {
                 position: relative;
-                z-index: -1;
 
                 &::after {
                     position: absolute;

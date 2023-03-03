@@ -107,7 +107,7 @@ window.onresize = changeBetweenDevices;
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 50;
+    z-index: 150;
     mix-blend-mode: difference;
 
     .navbar {
@@ -171,7 +171,8 @@ window.onresize = changeBetweenDevices;
             height: 100%;
             top: 0;
             left: 0;
-            background-color: #000;
+            background-color: $black;
+            z-index: 100;
 
             .mobile-nav {
                 align-items: center;
