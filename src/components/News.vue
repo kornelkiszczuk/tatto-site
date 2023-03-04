@@ -2,11 +2,12 @@
 import { Carousel, Slide, Pagination } from 'vue3-carousel'
 import 'vue3-carousel/dist/carousel.css'
 import arrow from '../assets/cross.svg'
+import carouselImg from '../assets/carousel.png'
 
 const carosuelItems = [
     {
         id: 1,
-        img: "/src/assets/carosuel.png",
+        img: carouselImg,
         title: "Nowoczesne technologie i narzędzia oraz rzemiosło stare jak świat",
         desc: "Nasza akademia to również sztuka alchemii",
         link: "www.google.pl",
@@ -17,7 +18,7 @@ const carosuelItems = [
     },
     {
         id: 2,
-        img: "/src/assets/carosuel.png",
+        img: carouselImg,
         title: "Nowoczesne technologie i narzędzia oraz rzemiosło stare jak świat",
         desc: "Nasza akademia to również sztuka alchemii",
         link: "www.google.pl",
@@ -28,7 +29,7 @@ const carosuelItems = [
     },
     {
         id: 3,
-        img: "/src/assets/carosuel.png",
+        img: carouselImg,
         title: "Nowoczesne technologie i narzędzia oraz rzemiosło stare jak świat",
         desc: "Nasza akademia to również sztuka alchemii",
         link: "www.google.pl",
@@ -39,7 +40,7 @@ const carosuelItems = [
     },
     {
         id: 4,
-        img: "/src/assets/carosuel.png",
+        img: carouselImg,
         title: "Nowoczesne technologie i narzędzia oraz rzemiosło stare jak świat",
         desc: "Nasza akademia to również sztuka alchemii",
         link: "www.google.pl",
