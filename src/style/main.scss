@@ -2,6 +2,14 @@
 @import './variables';
 @import './fonts';
 
+
+:root {
+    --vc-clr-primary: #FDBE4F;
+    --vc-clr-secondary: #EAEAEA;
+    --vc-pgn-width: 15px;
+    --vc-pgn-height: 15px;
+}
+
 *,
 *:before,
 *:after {
