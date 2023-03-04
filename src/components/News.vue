@@ -157,5 +157,15 @@ const carosuelItems = [
         }
     }
 
+    // .carousel__pagination-button::after {
+    //     width: 15px !important;
+    //     height: 15px !important;
+    //     background-color: #EAEAEA !important;
+    // }
+
+    // .carousel__pagination-button:hover::after,
+    // .carousel__pagination-button--active::after {
+    //     background-color: #FDBE4F !important;
+    // }
 }
 </style>
