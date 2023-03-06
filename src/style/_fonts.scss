@@ -1,25 +1,25 @@
 @font-face {
     font-family: 'GeneralSans';
     font-weight: 400;
-    src: url('./src/style/fonts/GeneralSans-Regular.woff2') format('woff2')
+    src: url('src/style/fonts/GeneralSans-Regular.woff2') format('woff2')
 }
 
 @font-face {
     font-family: 'GeneralSans';
     font-weight: 500;
-    src: url('./src/style/fonts/GeneralSans-Medium.woff2') format('woff2');
+    src: url('src/style/fonts/GeneralSans-Medium.woff2') format('woff2');
 }
 
 @font-face {
     font-family: 'GeneralSans';
     font-weight: 600;
-    src: url('./src/style/fonts/GeneralSans-Semibold.woff2') format('woff2');
+    src: url('src/style/fonts/GeneralSans-Semibold.woff2') format('woff2');
 
 }
 
 @font-face {
     font-family: 'MADEOuterSans';
-    src: url('./src/style/fonts/MADEOuterSans-Medium.ttf') format('truetype');
+    src: url('src/style/fonts/MADEOuterSans-Medium.ttf') format('ttf');
 }
 
 $regular-weight: 400;
