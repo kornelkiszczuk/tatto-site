@@ -16,5 +16,13 @@ export default defineConfig({
         additionalData: `@import "@/style/_shared.scss";`
       }
     }
-  }
+  },
+  build: {
+    assetsInlineLimit: 0,
+    rollupOptions: {
+      output: {
+        assetFileNames: 'fonts/[name][extname]',
+      },
+    },
+  },
 })
