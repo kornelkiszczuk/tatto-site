@@ -8,6 +8,11 @@
     --vc-clr-secondary: #EAEAEA !important;
     --vc-pgn-width: 15px !important;
     --vc-pgn-height: 15px !important;
+
+    @media (max-width: 576px) {
+        --vc-pgn-width: 10px !important;
+        --vc-pgn-height: 10px !important;
+    }
 }
 
 *,

@@ -8,6 +8,7 @@ const carosuelItems = [
     {
         id: 1,
         img: carouselImg,
+        imgAlt: "Mężczyzna w okualrach na szarym zdjęciu",
         title: "Nowoczesne technologie i narzędzia oraz rzemiosło stare jak świat",
         desc: "Nasza akademia to również sztuka alchemii",
         link: "www.google.pl",
@@ -19,6 +20,7 @@ const carosuelItems = [
     {
         id: 2,
         img: carouselImg,
+        imgAlt: "Mężczyzna w okualrach na szarym zdjęciu",
         title: "Nowoczesne technologie i narzędzia oraz rzemiosło stare jak świat",
         desc: "Nasza akademia to również sztuka alchemii",
         link: "www.google.pl",
@@ -30,6 +32,7 @@ const carosuelItems = [
     {
         id: 3,
         img: carouselImg,
+        imgAlt: "Mężczyzna w okualrach na szarym zdjęciu",
         title: "Nowoczesne technologie i narzędzia oraz rzemiosło stare jak świat",
         desc: "Nasza akademia to również sztuka alchemii",
         link: "www.google.pl",
@@ -41,6 +44,7 @@ const carosuelItems = [
     {
         id: 4,
         img: carouselImg,
+        imgAlt: "Mężczyzna w okualrach na szarym zdjęciu",
         title: "Nowoczesne technologie i narzędzia oraz rzemiosło stare jak świat",
         desc: "Nasza akademia to również sztuka alchemii",
         link: "www.google.pl",
@@ -50,14 +54,12 @@ const carosuelItems = [
         linkPath: "https://www.google.pl"
     }
 ]
-
-
 </script>
 
 <template>
     <carousel class="news" :autoplay="7000" :wrap-around="true">
         <slide class="news__slide" v-for="slide in carosuelItems" :key="slide.id">
-            <img class="news__img" :src="slide.img">
+            <img class="news__img" :src="slide.img" :alt="slide.imgAlt">
             <div class="news__title">
                 <h6 class="title">{{ slide.title }}</h6>
                 <p class="desc">{{ slide.desc }}</p>
@@ -156,16 +158,5 @@ const carosuelItems = [
             height: clamp(1.5625rem, 1.3566rem + 1.1765vw, 2.8125rem);
         }
     }
-
-    // .carousel__pagination-button::after {
-    //     width: 15px !important;
-    //     height: 15px !important;
-    //     background-color: #EAEAEA !important;
-    // }
-
-    // .carousel__pagination-button:hover::after,
-    // .carousel__pagination-button--active::after {
-    //     background-color: #FDBE4F !important;
-    // }
 }
 </style>
