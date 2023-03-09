@@ -1,24 +1,28 @@
 @font-face {
     font-family: 'GeneralSans';
     font-weight: 400;
+    font-display: swap;
     src: url('../style/fonts/GeneralSans-Regular.woff2') format('woff2')
 }
 
 @font-face {
     font-family: 'GeneralSans';
     font-weight: 500;
+    font-display: swap;
     src: url('../style/fonts/GeneralSans-Regular.woff2') format('woff2');
 }
 
 @font-face {
     font-family: 'GeneralSans';
     font-weight: 600;
+    font-display: swap;
     src: url('../style/fonts/GeneralSans-Semibold.woff2') format('woff2');
 
 }
 
 @font-face {
     font-family: 'MADEOuterSans';
+    font-display: swap;
     src: url('../style/fonts/MADEOuterSans-Medium.ttf') format('truetype');
 }
 

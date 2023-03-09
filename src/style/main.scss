@@ -3,18 +3,6 @@
 @import './fonts';
 
 
-:root {
-    --vc-clr-primary: #FDBE4F !important;
-    --vc-clr-secondary: #EAEAEA !important;
-    --vc-pgn-width: 15px !important;
-    --vc-pgn-height: 15px !important;
-
-    @media (max-width: 576px) {
-        --vc-pgn-width: 10px !important;
-        --vc-pgn-height: 10px !important;
-    }
-}
-
 *,
 *:before,
 *:after {
@@ -26,7 +14,6 @@
 
 html {
     font-size: 62.5%;
-    scroll-snap-type: y mandatory;
 }
 
 body {
@@ -78,12 +65,6 @@ nav {
     }
 }
 
-// section {
-//     height: 100vh;
-//     scroll-snap-align: start;
-
-// }
-
 section:nth-child(1) {
     padding-top: 20rem;
 
@@ -109,4 +90,32 @@ span {
 .flex-col {
     display: flex;
     flex-direction: column;
+}
+
+// swpier pagination
+
+.swiper-pagination {
+    position: static !important;
+    margin-top: 2.5rem !important;
+
+    @media (max-width:557px) {
+        margin-top: 1rem !important;
+    }
+}
+
+.swiper-pagination-bullet {
+    width: 15px !important;
+    height: 15px !important;
+    border-radius: 0px !important;
+    opacity: 1 !important;
+    background: #EAEAEA !important;
+
+    @media (max-width:557px) {
+        width: 10px !important;
+        height: 10px !important;
+    }
+}
+
+.swiper-pagination-bullet-active {
+    background: $primary-color !important;
 }

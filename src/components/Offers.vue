@@ -1,14 +1,9 @@
 <script setup>
-import Offer from "./Offer.vue"
-import { Carousel, Slide } from 'vue3-carousel'
-import 'vue3-carousel/dist/carousel.css'
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import 'swiper/css';
 import diamond from "../assets/diamond.svg"
 import manhattan from "../assets/manhattan.svg"
 import brooklyn from "../assets/brooklyn.svg"
-
-
-
-
 
 const offers = [
     {
@@ -46,41 +41,14 @@ const offers = [
         img: manhattan,
         prosList: ["tryb indywidualny", "kurs stacjonarny", "czas trwania 6 dni", "tatuowanie na modelu - 1 dzień", "zakwaterowanie w cenie", "obiady w cenie"]
     },
-    {
-        id: 5,
-        title: "Manhattan",
-        desc: "Szkolenie od podstaw, mix technik",
-        img: manhattan,
-        prosList: ["tryb indywidualny", "kurs stacjonarny", "czas trwania 6 dni", "tatuowanie na modelu - 1 dzień", "zakwaterowanie w cenie", "obiady w cenie"]
-    },
-    {
-        id: 5,
-        title: "Manhattan",
-        desc: "Szkolenie od podstaw, mix technik",
-        img: manhattan,
-        prosList: ["tryb indywidualny", "kurs stacjonarny", "czas trwania 6 dni", "tatuowanie na modelu - 1 dzień", "zakwaterowanie w cenie", "obiady w cenie"]
-    },
-    {
-        id: 5,
-        title: "Manhattan",
-        desc: "Szkolenie od podstaw, mix technik",
-        img: manhattan,
-        prosList: ["tryb indywidualny", "kurs stacjonarny", "czas trwania 6 dni", "tatuowanie na modelu - 1 dzień", "zakwaterowanie w cenie", "obiady w cenie"]
-    },
-    {
-        id: 5,
-        title: "Manhattan",
-        desc: "Szkolenie od podstaw, mix technik",
-        img: manhattan,
-        prosList: ["tryb indywidualny", "kurs stacjonarny", "czas trwania 6 dni", "tatuowanie na modelu - 1 dzień", "zakwaterowanie w cenie", "obiady w cenie"]
-    },
+
 ]
 
 </script>
 <template>
     <section class="offers">
         <div class="offers__diamond">
-            <img :src="diamond" alt="zdjęcię diamentu">
+            <img :src="diamond" alt="zdjęcie diamentu">
         </div>
         <div class="offers__container">
             <div class="offers__header">
@@ -92,43 +60,30 @@ const offers = [
                     Mentor.
                 </p>
             </div>
-            <carousel class="offers__content" :items-to-show="1">
-                <slide v-for="offer in offers" class="offer">
-                    <img class="offer__img" :src="offer.img" alt="">
+            <swiper class="offers__content" :slidesPerView="'auto'" :spaceBetween="20">
+                <swiper-slide v-for="offer in offers" class="offer">
+                    <img class="offer__img" :src="offer.img">
                     <div class="offer__header">
                         <p class="title">{{ offer.title }}</p>
                         <p class="desc">{{ offer.desc }}</p>
                     </div>
                     <div class="offer__content"></div>
                     <div class="offer__btn"></div>
-                </slide>
-            </carousel>
-            <!-- <div class="owl-carousel offers__content">
-                                                <div v-for="offer in offers" class="offer">
-                                                    <img class="offer__img" :src="offer.img" alt="">
-                                                    <div class="offer__header">
-                                                        <p class="title">{{ offer.title }}</p>
-                                                        <p class="desc">{{ offer.desc }}</p>
-                                                    </div>
-                                                    <div class="offer__content"></div>
-                                                    <div class="offer__btn"></div>
-                                                </div>
-                                            </div> -->
+                </swiper-slide>
+            </swiper>
         </div>
     </section>
 </template>
-<!-- <Offer v-for="offer in offers" :key="offer.id" :offer="offer" /> -->
 
 <style lang="scss" scoped>
 .offers {
     display: flex;
     margin-bottom: 16rem;
-    // overflow: hidden;
 
     &__diamond {
         img {
             margin-top: 12rem;
-            width: clamp(6.25rem, 3.9853rem + 12.9412vw, 20rem);
+            width: clamp(4.6875rem, 2.4743rem + 12.6471vw, 18.125rem);
 
             @media (max-width:576px) {
                 margin-top: 8rem;
@@ -136,8 +91,16 @@ const offers = [
         }
     }
 
+    &__container {
+        width: calc(100% - clamp(4.6875rem, 2.4743rem + 12.6471vw, 18.125rem));
+    }
+
     &__header {
         margin-bottom: 7.5rem;
+
+        @media (max-width:576px) {
+            margin-bottom: 3.5rem;
+        }
 
         .title {
             margin-bottom: 25px;
@@ -158,14 +121,17 @@ const offers = [
 
     &__content {
         display: flex;
+        gap: 2rem;
     }
 }
 
 .offer {
-    margin-right: 2rem;
     position: relative;
-    width: clamp(16.25rem, 12.7088rem + 20.2353vw, 37.75rem) !important;
-    height: clamp(21.875rem, 16.2956rem + 31.8824vw, 55.75rem) !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: clamp(25rem, 19.9353rem + 28.9412vw, 55.75rem);
+    width: clamp(12.5rem, 8.3412rem + 23.7647vw, 37.75rem);
     border: 1px solid #262523;
     background: linear-gradient(to bottom, $bgc-white 50%, $text-black 50%);
 
@@ -173,10 +139,19 @@ const offers = [
         position: absolute;
         top: 35%;
         width: 100%;
+
+        @media (max-width:992px) {
+            top: 37%;
+        }
+
+        @media (max-width:576px) {
+            top: 38%;
+        }
     }
 
     &__header {
         .title {
+            margin-top: 2.8rem;
             font-family: "MADEOuterSans", "Arial";
             letter-spacing: 10%;
             font-size: 25px;

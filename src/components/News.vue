@@ -1,8 +1,12 @@
 <script setup>
-import { Carousel, Slide, Pagination } from 'vue3-carousel'
-import 'vue3-carousel/dist/carousel.css'
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Pagination, Autoplay } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/pagination';
 import arrow from '../assets/cross.svg'
 import carouselImg from '../assets/carousel.png'
+
+const modules = [Pagination, Autoplay];
 
 const carosuelItems = [
     {
@@ -57,25 +61,25 @@ const carosuelItems = [
 </script>
 
 <template>
-    <carousel class="news" :autoplay="7000" :wrap-around="true">
-        <slide class="news__slide" v-for="slide in carosuelItems" :key="slide.id">
-            <img class="news__img" :src="slide.img" :alt="slide.imgAlt">
-            <div class="news__title">
-                <h6 class="title">{{ slide.title }}</h6>
-                <p class="desc">{{ slide.desc }}</p>
-            </div>
-            <div class="news__link">
-                <div class="text">
-                    <p class="title">{{ slide.linkTitle }} <span>{{ slide.linkTitleSpan }}</span> </p>
-                    <p class="desc">{{ slide.linkDesc }}</p>
+    <section class="news">
+        <swiper :autoplay="{ delay: 4500, disableOnInteraction: false, }" :loop="true" :pagination="{ clickable: true, }"
+            :modules="modules">
+            <swiper-slide class="news__slide" v-for="slide in carosuelItems" :key="slide.id">
+                <img class="news__img" :src="slide.img" :alt="slide.imgAlt">
+                <div class="news__title">
+                    <h6 class="title">{{ slide.title }}</h6>
+                    <p class="desc">{{ slide.desc }}</p>
                 </div>
-                <a target="_blank" :href="slide.linkPath"><img class="arrow" :src="arrow"></a>
-            </div>
-        </slide>
-        <template #addons>
-            <pagination />
-        </template>
-    </carousel>
+                <div class="news__link">
+                    <div class="text">
+                        <p class="title">{{ slide.linkTitle }} <span>{{ slide.linkTitleSpan }}</span> </p>
+                        <p class="desc">{{ slide.linkDesc }}</p>
+                    </div>
+                    <a target="_blank" :href="slide.linkPath"><img class="arrow" :src="arrow"></a>
+                </div>
+            </swiper-slide>
+        </swiper>
+    </section>
 </template>
 
 <style lang="scss" scoped>
