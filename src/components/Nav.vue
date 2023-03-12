@@ -179,12 +179,22 @@ window.onresize = changeBetweenDevices;
                 justify-content: center;
                 gap: 1rem;
 
+                @media (max-width: 1000px) and (orientation: landscape) {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    place-items: center;
+                }
+
                 .nav-link {
                     padding: 1rem 2rem;
                     color: white;
                     text-transform: uppercase;
                     font-weight: 700;
                     font-size: clamp(2.5rem, 2.2083rem + 1.6667vw, 3.25rem);
+
+                    @media (max-width: 1000px) and (orientation: landscape) {
+                        font-size: 1.5rem;
+                    }
                 }
             }
 
@@ -194,6 +204,10 @@ window.onresize = changeBetweenDevices;
                 left: 0;
                 font-size: clamp(1.125rem, 0.9756rem + 0.8537vw, 1.5625rem);
                 padding: 0 6rem 6rem;
+
+                @media (max-width: 1000px) and (orientation: landscape) {
+                    padding: 0 6rem 2.5rem;
+                }
 
                 a {
                     color: $white;

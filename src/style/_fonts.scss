@@ -22,8 +22,16 @@
 
 @font-face {
     font-family: 'MADEOuterSans';
+    font-weight: 400;
     font-display: swap;
     src: url('../style/fonts/MADEOuterSans-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'MADEOuterSans';
+    font-weight: 200;
+    font-display: swap;
+    src: url('../style/fonts/MADEOuterSans-Thin.otf') format('opentype');
 }
 
 $regular-weight: 400;
