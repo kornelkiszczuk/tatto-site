@@ -1,4 +1,5 @@
 <script setup>
+import Descriptions from './components/Descriptions.vue';
 import Hero from './components/Hero.vue';
 import Marquee from './components/Marquee.vue';
 import Nav from './components/Nav.vue';
@@ -15,6 +16,7 @@ import Offers from './components/Offers.vue';
     <News />
     <Marquee marqueeText="9 kursów - 9 dzielnic talentu" />
     <Offers />
+    <Descriptions />
   </main>
 </template>
 

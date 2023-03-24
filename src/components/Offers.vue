@@ -166,9 +166,9 @@ const offers = [
 
         .title {
             margin-bottom: .5rem;
-            font-family: "MADEOuterSans", "Arial";
             font-size: clamp(1.125rem, 0.8902rem + 1.3415vw, 2.5rem);
-            font-weight: 200;
+            font-family: "MADEOuterSans", "Arial";
+            font-weight: $thin-weight;
             letter-spacing: 3px;
             text-transform: uppercase;
 
@@ -224,7 +224,6 @@ const offers = [
         }
 
         .text {
-            // font-size: clamp(1rem, 0.904rem + 0.5488vw, 1.5625rem);
             font-size: clamp(0.625rem, 0.4854rem + 0.7975vw, 1.4375rem);
         }
     }

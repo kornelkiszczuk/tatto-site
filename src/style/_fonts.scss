@@ -2,38 +2,39 @@
     font-family: 'GeneralSans';
     font-weight: 400;
     font-display: swap;
-    src: url('../style/fonts/GeneralSans-Regular.woff2') format('woff2')
+    src: url('../assets/fonts/GeneralSans-Regular.woff2') format('woff2')
 }
 
 @font-face {
     font-family: 'GeneralSans';
     font-weight: 500;
     font-display: swap;
-    src: url('../style/fonts/GeneralSans-Regular.woff2') format('woff2');
+    src: url('../assets/fonts/GeneralSans-Medium.woff2') format('woff2');
 }
 
 @font-face {
     font-family: 'GeneralSans';
     font-weight: 600;
     font-display: swap;
-    src: url('../style/fonts/GeneralSans-Semibold.woff2') format('woff2');
+    src: url('../assets/fonts/GeneralSans-Semibold.woff2') format('woff2');
 
-}
-
-@font-face {
-    font-family: 'MADEOuterSans';
-    font-weight: 400;
-    font-display: swap;
-    src: url('../style/fonts/MADEOuterSans-Medium.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'MADEOuterSans';
     font-weight: 200;
     font-display: swap;
-    src: url('../style/fonts/MADEOuterSans-Thin.otf') format('opentype');
+    src: url('../assets/fonts/MADEOuterSans-Thin.otf') format('opentype');
 }
 
+@font-face {
+    font-family: 'MADEOuterSans';
+    font-weight: 400;
+    font-display: swap;
+    src: url('../assets/fonts/MADEOuterSans-Medium.ttf') format('truetype');
+}
+
+$thin-weight: 200;
 $regular-weight: 400;
 $medium-weight: 500;
 $semibold-weight: 600;

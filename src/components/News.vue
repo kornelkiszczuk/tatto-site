@@ -12,7 +12,7 @@ const carosuelItems = [
     {
         id: 1,
         img: carouselImg,
-        imgAlt: "Mężczyzna w okualrach na szarym zdjęciu",
+        imgAlt: "Mężczyzna w okularach na szarym tle",
         title: "Nowoczesne technologie i narzędzia oraz rzemiosło stare jak świat",
         desc: "Nasza akademia to również sztuka alchemii",
         link: "www.google.pl",
@@ -24,7 +24,7 @@ const carosuelItems = [
     {
         id: 2,
         img: carouselImg,
-        imgAlt: "Mężczyzna w okualrach na szarym zdjęciu",
+        imgAlt: "Mężczyzna w okularach na szarym tle",
         title: "Nowoczesne technologie i narzędzia oraz rzemiosło stare jak świat",
         desc: "Nasza akademia to również sztuka alchemii",
         link: "www.google.pl",
@@ -36,7 +36,7 @@ const carosuelItems = [
     {
         id: 3,
         img: carouselImg,
-        imgAlt: "Mężczyzna w okualrach na szarym zdjęciu",
+        imgAlt: "Mężczyzna w okularach na szarym tle",
         title: "Nowoczesne technologie i narzędzia oraz rzemiosło stare jak świat",
         desc: "Nasza akademia to również sztuka alchemii",
         link: "www.google.pl",
@@ -48,7 +48,7 @@ const carosuelItems = [
     {
         id: 4,
         img: carouselImg,
-        imgAlt: "Mężczyzna w okualrach na szarym zdjęciu",
+        imgAlt: "Mężczyzna w okularach na szarym tle",
         title: "Nowoczesne technologie i narzędzia oraz rzemiosło stare jak świat",
         desc: "Nasza akademia to również sztuka alchemii",
         link: "www.google.pl",

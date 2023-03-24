@@ -57,7 +57,6 @@ const changeBetweenDevices = () => {
 onMounted(() => changeBetweenDevices());
 window.onresize = changeBetweenDevices;
 
-
 </script>
 
 
