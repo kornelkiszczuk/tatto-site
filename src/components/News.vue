@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Pagination, Autoplay } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import carouselImg from '../assets/carousel.png'
+import carouselImg from '../assets/carousel.svg'
 
 const modules = [Pagination, Autoplay];
 
@@ -60,7 +60,7 @@ const carosuelItems = [
 </script>
 
 <template>
-    <section class="news">
+    <section class="news space-100">
         <swiper :autoplay="{ delay: 4500, disableOnInteraction: false, }" :loop="true" :pagination="{ clickable: true, }"
             :modules="modules">
             <swiper-slide class="news__slide" v-for="slide in carosuelItems" :key="slide.id">

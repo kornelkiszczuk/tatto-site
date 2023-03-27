@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <footer class="footer">
+    <footer class="footer space-100">
         <div class="footer__container">
             <a class="footer__aside-link" href="#">
                 <p>Społeczność</p>
@@ -30,7 +30,7 @@
                 </div>
             </nav>
             <div class="footer__copyright">
-                <p class="author">BY AD AWARDS</p>
+                <a href="#" class="author">BY AD AWARDS</a>
                 <a href="#" class="cookies">POLITYKA COOKIES</a>
             </div>
         </div>
@@ -39,12 +39,7 @@
 
 <style lang="scss" scoped>
 .footer {
-    margin-bottom: 10rem;
     text-transform: uppercase;
-
-    @media (max-width:1100px) {
-        margin-bottom: 5rem;
-    }
 
     &__container {
         position: relative;

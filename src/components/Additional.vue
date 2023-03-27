@@ -4,14 +4,15 @@ import tiger from '../assets/tiger.svg';
 </script>
 
 <template>
-    <section class="additional ">
+    <section class="additional space-150">
         <div class="additional__container padding-left">
-            <img class="additional__hand" :src="hand">
-            <img class="additional__tiger" :src="tiger">
-            <div class="additional__header">
-                <h2 class="title">ODKRYWAJ PROFESJĘ <br />
+            <img class="additional__hand" :src="hand" alt="Otwarta dłoń z okiem na środku">
+            <img class="additional__tiger" :src="tiger" alt="Tygrys koloru żołtego">
+            <div class="additional__header space-100">
+                <h2 class="title text-title">ODKRYWAJ PROFESJĘ <br />
                     TATUAŻYSTY Z NAMI</h2>
-                <p class="desc">Zapraszamy na artykuły i nagrania z wiedzą i doświadczeniem, których nie znajdziesz nigdzie
+                <p class="desc text-desc">Zapraszamy na artykuły i nagrania z wiedzą i doświadczeniem, których nie
+                    znajdziesz nigdzie
                     więcej. Lubimy jakość, “mięsko” wiadomości i dobrą atmosferę dzielenia się nimi. W naszej galerii do
                     odkrycia najlepsze prace i dobra energia, która towarzyszyła w ich realizacji.</p>
             </div>
@@ -81,33 +82,17 @@ import tiger from '../assets/tiger.svg';
     }
 
     &__header {
-        margin-bottom: 10rem;
-
-        @media (max-width:576px) {
-            margin-bottom: 5rem;
-        }
-
         .title {
             margin-bottom: 3rem;
-            font-family: "MADEOuterSans";
-            font-size: clamp(1.875rem, 1.2779rem + 3.4118vw, 5.5rem);
-
-
         }
 
         .desc {
             width: 40%;
             margin-left: 30rem;
-            font-size: clamp(1.25rem, 1.1265rem + 0.7059vw, 2rem);
-            line-height: 35px;
 
             @media (max-width:1000px) {
                 width: 100%;
                 margin-left: 0;
-            }
-
-            @media (max-width:576px) {
-                line-height: 2rem;
             }
         }
     }

@@ -34,7 +34,34 @@
     src: url('../assets/fonts/MADEOuterSans-Medium.ttf') format('truetype');
 }
 
+
 $thin-weight: 200;
 $regular-weight: 400;
 $medium-weight: 500;
 $semibold-weight: 600;
+
+$text-s: clamp(1.25rem, 1.1265rem + 0.7059vw, 2rem);
+$text-m: clamp(1.875rem, 1.2779rem + 3.4118vw, 5.5rem);
+
+
+
+.text-desc {
+    font-size: $text-s;
+    line-height: 3.5rem;
+
+    @media (max-width:576px) {
+        line-height: 2rem;
+    }
+}
+
+.text-title {
+    font-family: "MADEOuterSans", sans-serif;
+    font-size: $text-m;
+    font-weight: $medium-weight;
+    line-height: 5.5rem;
+    text-transform: uppercase;
+
+    @media (max-width:576px) {
+        line-height: 2.75rem;
+    }
+}

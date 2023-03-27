@@ -119,6 +119,22 @@ span {
     }
 }
 
+.space-100 {
+    margin-bottom: 10rem;
+
+    @media (max-width:726px) {
+        margin-bottom: 5rem;
+    }
+}
+
+.space-150 {
+    margin-bottom: 15rem;
+
+    @media (max-width:726px) {
+        margin-bottom: 7.5rem;
+    }
+}
+
 // swpier pagination
 
 .swiper-pagination {

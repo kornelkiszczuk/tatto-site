@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <section class="slogan">
+    <section class="slogan space-100">
         <div class="slogan__text-container">
             <h1 class="slogan__title"><span>Tatuażysta</span><br />
                 Czy to Twój pomysł na wyjątkową<br /> pracę? Jeśli tak, to wiesz, że <span>talent</span>,<br />
@@ -21,11 +21,6 @@
 <style lang="scss" scoped>
 .slogan {
     text-transform: uppercase;
-    margin-bottom: 10rem;
-
-    @media (max-width:576px) {
-        margin-bottom: 2rem;
-    }
 
     &__title {
         font-family: 'MADEOuterSans';

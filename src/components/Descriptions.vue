@@ -23,15 +23,14 @@ const descriptions = [
 ]
 
 </script>
-
-        
+ 
 <template>
-    <section class="descriptions">
+    <section class="descriptions space-150">
         <div class="descriptions__aside">
             <p class="descriptions__title">CO ROBIMY <br /> WYJĄTKOWO?</p>
         </div>
         <div class="descriptions__container padding-left">
-            <p class="descriptions__desc">Na rynku jest wiele szkół tatuażu i kursów doszkalających. Z radością i
+            <p class="descriptions__desc text-desc">Na rynku jest wiele szkół tatuażu i kursów doszkalających. Z radością i
                 satysfakcją obserwujemy jak zawód tatuażysty się rozwija. A niekiedy jest nam smutno, ponieważ widzimy, że
                 są szkolenia, które nie prowadzą tam, gdzie chcielibyśmy by adepci rzemiosła tatuażu docierali.
                 Postanowiliśmy, że nasza akademia to będzie “coś na 100%”. Zbieramy tu wszystkie doświadczenia, obserwacje,
@@ -39,11 +38,11 @@ const descriptions = [
                 MISTRZOSTWA. Dlatego są wartości, na które zwracamy szczególną uwagę:
             </p>
             <div class="description">
-                <img :src="rose" class="description__rose">
+                <img :src="rose" alt="Czarna róża z dwoma liśćmi" class="description__rose">
                 <div v-for="description in descriptions" :id="description.id" class="description__item">
                     <h4 class="description__title">{{ description.title }}</h4>
-                    <p class="description__first-text">{{ description.firstText }}</p>
-                    <p class="description__second-text">{{ description.secondText }}</p>
+                    <p class="description__first-text text-desc">{{ description.firstText }}</p>
+                    <p class="description__second-text text-desc">{{ description.secondText }}</p>
                 </div>
             </div>
         </div>
@@ -55,7 +54,6 @@ const descriptions = [
 .descriptions {
     position: relative;
     display: flex;
-    margin-bottom: 15rem;
 
     @media(max-width:1100px) {
         flex-direction: column;
@@ -88,13 +86,7 @@ const descriptions = [
 
     &__desc {
         width: 100%;
-        font-size: clamp(1.5rem, 1.4146rem + 0.4878vw, 2rem);
         font-weight: $semibold-weight;
-        line-height: 3.5rem;
-
-        @media (max-width:725px) {
-            line-height: 2rem;
-        }
     }
 
 
@@ -128,14 +120,11 @@ const descriptions = [
     &__second-text {
         flex: 1;
         margin-left: 2rem;
-        font-size: clamp(1.5rem, 1.4146rem + 0.4878vw, 2rem);
-        line-height: 3.5rem;
         text-align: left;
 
         @media(max-width:1400px) {
             margin-left: 0px;
             margin-bottom: 2rem;
-            text-align: justify;
         }
     }
 

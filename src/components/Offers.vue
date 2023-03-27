@@ -11,6 +11,7 @@ const offers = [
         title: "Manhattan",
         desc: "Szkolenie od podstaw, mix technik",
         img: manhattan,
+        imgAlt: "Ilustracje budynków przestawiające miasto Manhattan",
         prosList: ["tryb indywidualny", "kurs stacjonarny", "czas trwania 6 dni", "tatuowanie na modelu - 1 dzień", "zakwaterowanie w cenie", "obiady w cenie"],
         color: "#C6C2E5"
     },
@@ -19,6 +20,7 @@ const offers = [
         title: "Manhattan+",
         desc: "Szkolenie od podstaw,mix technik z praktykami",
         img: manhattan,
+        imgAlt: "Ilustracje budynków przestawiające miasto Manhattan",
         prosList: ["tryb indywidualny", "kurs stacjonarny", "czas trwania 12 dni", "tatuowanie na modelu - 6 dzień", "zakwaterowanie w cenie", "obiady w cenie"],
         color: "#FDBE4F"
     },
@@ -27,6 +29,7 @@ const offers = [
         title: "BROOKLYN",
         desc: "Szkolenie od podstaw z zakresu tatuaży realistycznych",
         img: brooklyn,
+        imgAlt: "Ilustracje budynków przestawiające miasto Brooklyn",
         prosList: ["tryb indywidualny", "kurs stacjonarny", "czas trwania 6 dni", "tatuowanie na modelu - 1 dzień", "zakwaterowanie w cenie", "obiady w cenie"],
         color: "#C6C2E5"
     },
@@ -35,6 +38,7 @@ const offers = [
         title: "BROOKLYN+",
         desc: "Szkolenie od podstaw z zakresu tatuaży realistycznych z praktykami",
         img: brooklyn,
+        imgAlt: "Ilustracje budynków przestawiające miasto Brooklyn",
         prosList: ["tryb indywidualny", "kurs stacjonarny", "czas trwania 12 dni", "tatuowanie na modelu - 6 dzień", "zakwaterowanie w cenie", "obiady w cenie"],
         color: "#FDBE4F"
     },
@@ -43,6 +47,7 @@ const offers = [
         title: "Manhattan",
         desc: "Szkolenie od podstaw, mix technik",
         img: manhattan,
+        imgAlt: "Ilustracje budynków przestawiające miasto Manhattan",
         prosList: ["tryb indywidualny", "kurs stacjonarny", "czas trwania 6 dni", "tatuowanie na modelu - 1 dzień", "zakwaterowanie w cenie", "obiady w cenie"],
         color: "#C6C2E5"
     },
@@ -53,13 +58,14 @@ const offers = [
 <template>
     <section class="offers">
         <div class="offers__diamond">
-            <img :src="diamond" alt="zdjęcie diamentu">
+            <img :src="diamond" alt="fioletowy diament">
         </div>
         <div class="offers__container padding-left">
             <div class="offers__header padding-right">
-                <h2 class="title">Wybierz Kurs tatuażu<br />
+                <h2 class="title text-title">Wybierz Kurs tatuażu<br />
                     dla siebie!</h2>
-                <p class="desc">Rozgość się, zdobywaj wiedzę, projektuj, ćwicz. Łączymy teorię z praktyką, przybliżamy
+                <p class="desc text-desc">Rozgość się, zdobywaj wiedzę, projektuj, ćwicz. Łączymy teorię z praktyką,
+                    przybliżamy
                     trendy. Do <br /> dyspozycji masz warsztat, narzędzia, programy i materiały. Na każdym etapie jest przy
                     Tobie
                     Mentor.
@@ -67,7 +73,7 @@ const offers = [
             </div>
             <swiper class="offers__content padding-right" :slidesPerView="'auto'" :spaceBetween="20">
                 <swiper-slide v-for="offer in offers" class="offer">
-                    <img class="offer__img" :src="offer.img">
+                    <img class="offer__img" :src="offer.img" :alt="offer.imgAlt">
                     <div class="offer__header">
                         <p class="title">{{ offer.title }}</p>
                         <p class="desc">{{ offer.desc }}</p>
@@ -99,6 +105,10 @@ const offers = [
     display: flex;
     margin-bottom: 16rem;
     padding-right: 0;
+
+    @media(max-width:726px) {
+        margin-bottom: 8rem;
+    }
 
     &__diamond {
 
@@ -140,18 +150,6 @@ const offers = [
 
         .title {
             margin-bottom: 25px;
-            font-family: "MADEOuterSans", "Arial";
-            text-transform: uppercase;
-            font-size: clamp(1.875rem, 1.2779rem + 3.4118vw, 5.5rem);
-        }
-
-        .desc {
-            font-size: clamp(1.25rem, 1.1265rem + 0.7059vw, 2rem);
-            line-height: 3.5rem;
-
-            @media (max-width:576px) {
-                line-height: 2rem;
-            }
         }
     }
 }
