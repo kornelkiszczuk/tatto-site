@@ -55,7 +55,7 @@ nav {
     overflow: hidden;
 
     @media (max-width:1100px) {
-        padding-inline: 7.6rem;
+        padding-inline: 5rem;
     }
 
     @media (max-width:725px) {
@@ -92,11 +92,29 @@ span {
     padding-right: 6.7rem !important;
 
     @media (max-width:1100px) {
-        padding-right: 7.6rem !important;
+        padding-right: 5rem !important;
     }
 
     @media (max-width:725px) {
         padding-right: 1.8rem !important;
+    }
+}
+
+.padding-left {
+    padding-left: calc(37.4rem - 6.7rem);
+
+
+    @media (max-width:1350px) {
+        padding-left: calc(37.4rem - 12.7rem);
+    }
+
+    @media (max-width:1150px) {
+        padding-left: calc(37.4rem - 19rem);
+    }
+
+
+    @media (max-width:1100px) {
+        padding-left: 0rem
     }
 }
 

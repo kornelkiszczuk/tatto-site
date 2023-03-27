@@ -191,7 +191,12 @@ window.onresize = changeBetweenDevices;
                     font-weight: 700;
                     font-size: clamp(2.5rem, 2.2083rem + 1.6667vw, 3.25rem);
 
+
                     @media (max-width: 1000px) and (orientation: landscape) {
+                        font-size: 2.5rem;
+                    }
+
+                    @media (max-height: 300px) and (orientation: landscape) {
                         font-size: 1.5rem;
                     }
                 }

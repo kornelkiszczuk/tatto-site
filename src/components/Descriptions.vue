@@ -30,7 +30,7 @@ const descriptions = [
         <div class="descriptions__aside">
             <p class="descriptions__title">CO ROBIMY <br /> WYJĄTKOWO?</p>
         </div>
-        <div class="descriptions__container">
+        <div class="descriptions__container padding-left">
             <p class="descriptions__desc">Na rynku jest wiele szkół tatuażu i kursów doszkalających. Z radością i
                 satysfakcją obserwujemy jak zawód tatuażysty się rozwija. A niekiedy jest nam smutno, ponieważ widzimy, że
                 są szkolenia, które nie prowadzą tam, gdzie chcielibyśmy by adepci rzemiosła tatuażu docierali.
@@ -57,17 +57,12 @@ const descriptions = [
     display: flex;
     margin-bottom: 15rem;
 
-    @media(max-width:1000px) {
+    @media(max-width:1100px) {
         flex-direction: column;
     }
 
     &__aside {
         position: relative;
-        width: clamp(5rem, 2.471rem + 14.4512vw, 19.8125rem);
-
-        @media(max-width:1000px) {
-            width: auto;
-        }
     }
 
     &__title {
@@ -81,7 +76,7 @@ const descriptions = [
         font-size: clamp(2.1875rem, 1.622rem + 3.2317vw, 5.5rem);
         text-transform: uppercase;
 
-        @media(max-width:1000px) {
+        @media(max-width:1100px) {
             margin-bottom: 2rem;
             text-align: unset;
             position: static;
@@ -92,18 +87,17 @@ const descriptions = [
     }
 
     &__desc {
+        width: 100%;
         font-size: clamp(1.5rem, 1.4146rem + 0.4878vw, 2rem);
         font-weight: $semibold-weight;
         line-height: 3.5rem;
-    }
 
-    &__container {
-        width: calc(100% - clamp(5rem, 2.471rem + 14.4512vw, 19.8125rem));
-
-        @media(max-width:1000px) {
-            width: 100%;
+        @media (max-width:725px) {
+            line-height: 2rem;
         }
     }
+
+
 }
 
 .description {

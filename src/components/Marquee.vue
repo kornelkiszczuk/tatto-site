@@ -15,10 +15,10 @@ const { marqueeText } = defineProps(['marqueeText'])
     &__text {
         font-family: "MADEOuterSans", "Arial";
         font-size: clamp(2.5rem, -0.0735rem + 14.7059vw, 18.125rem);
-        margin-bottom: 10rem;
+        margin-block: 10rem;
 
         @media (max-width:576px) {
-            margin-bottom: 5rem;
+            margin-block: 5rem;
         }
     }
 }
