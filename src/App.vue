@@ -1,6 +1,7 @@
 <script setup>
 import Additional from './components/Additional.vue';
 import Descriptions from './components/Descriptions.vue';
+import Footer from './components/Footer.vue';
 import Hero from './components/Hero.vue';
 import Marquee from './components/Marquee.vue';
 import Nav from './components/Nav.vue';
@@ -19,6 +20,7 @@ import Offers from './components/Offers.vue';
     <Additional />
     <Marquee marqueeText="Dołącz do wyjątkowej społeczności " />
   </main>
+  <Footer />
 </template>
 
 <style scoped></style>
