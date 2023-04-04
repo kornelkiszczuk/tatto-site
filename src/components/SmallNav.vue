@@ -7,10 +7,7 @@ const { firstLinkOne, firstLinkTwo, secondLinkOne, secondLinkTwo, email, tel } =
     <section class="small-nav space-150">
         <a class="small-nav__link" href="">{{ firstLinkOne }}<br>{{ firstLinkTwo }}</a>
         <a class="small-nav__link padding-left" href="">{{ secondLinkOne }}<br>{{ secondLinkTwo }}</a>
-        <div class="small-nav__contact">
-            <a class="small-nav__contact-link" href="">{{ email }}</a>
-            <a class="small-nav__contact-link" href="">{{ tel }}</a>
-        </div>
+        <a class="small-nav__link" href="">{{ email }}<br>{{ tel }}</a>
     </section>
 </template>
 
@@ -19,13 +16,13 @@ const { firstLinkOne, firstLinkTwo, secondLinkOne, secondLinkTwo, email, tel } =
 .small-nav {
     position: relative;
     display: flex;
-    gap: clamp(18.75rem, 11.5441rem + 41.1765vw, 62.5rem);
+    gap: clamp(18.75rem, 4.1807rem + 46.6216vw, 61.875rem);
 
     @media (max-width: 1450px) {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 0px;
         place-items: center;
+        gap: 0px;
     }
 
     @media (max-width: 756px) {
@@ -43,24 +40,15 @@ const { firstLinkOne, firstLinkTwo, secondLinkOne, secondLinkTwo, email, tel } =
         }
     }
 
-    &__contact {
-        display: flex;
-        flex-direction: column;
-    }
 
-
-    &__link,
-    &__contact-link {
+    &__link {
         text-transform: uppercase;
         font-size: clamp(1.0625rem, 1.0007rem + 0.3529vw, 1.4375rem);
         line-height: 1.9rem;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
 
         @media (max-width: 1450px) {
             padding-left: 0px;
-            line-height: 1rem;
+            line-height: 1.5rem;
             margin-bottom: 1rem;
         }
     }

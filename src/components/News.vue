@@ -13,8 +13,12 @@ const swiperRef = ref(null)
 const onSwiper = (swiper) => {
     swiperRef.value = swiper
 }
-watch(isClicked, () => {
-    swiperRef.value.autoplay.stop()
+watch(isClicked, (newValue) => {
+    if (newValue) {
+        swiperRef.value.autoplay.pause();
+    } else {
+        swiperRef.value.autoplay.resume();
+    }
 })
 
 
@@ -75,9 +79,9 @@ const carosuelItems = [
 <template>
     <section class="news space-100">
         <swiper @swiper="onSwiper" :autoplay="{ delay: 4500, disableOnInteraction: false }" :loop="true" :pagination="{
-            clickable: true
+            clickable: true, el: '.pagination__items'
         }" :modules="[Pagination, Autoplay]">
-            <swiper-slide class="news__slide" v-for="slide in carosuelItems" :key="slide.id">
+            <swiper-slide class="news__slide" v-for="slide in             carosuelItems" :key="slide.id">
                 <img class="news__img" :src="slide.img" :alt="slide.imgAlt">
                 <div class="news__title">
                     <h6 class="title">{{ slide.title }}</h6>
@@ -96,11 +100,18 @@ const carosuelItems = [
                         </svg></a>
                 </div>
             </swiper-slide>
-            <span @click="isClicked = !isClicked">
-                <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17.5 10.0002L0.500001 20.0002L0.500002 0.000167853L17.5 10.0002Z" fill="#FDBE4F" />
-                </svg>
-            </span>
+            <div class="pagination">
+                <button class="pagination__btn" @click="isClicked = !isClicked">
+                    <svg v-if="isClicked" viewBox="0 0 18 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.5 10.0002L0.500001 20.0002L0.500002 0.000167853L17.5 10.0002Z" fill="currentColor" />
+                    </svg>
+                    <svg v-else viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0H8V20H0V0Z" fill="currentColor" />
+                        <path d="M12 0H20V20H12V0Z" fill="currentColor" />
+                    </svg>
+                </button>
+                <div class="pagination__items"></div>
+            </div>
         </swiper>
     </section>
 </template>
@@ -134,12 +145,14 @@ const carosuelItems = [
 
         .title {
             margin-bottom: 1.5rem;
-            font-family: "MADEOuterSans";
+            font-family: "MADEOuterSans", sans-serif;
             font-size: clamp(0.625rem, -0.5574rem + 3.7838vw, 4.125rem);
+            line-height: 5rem;
             letter-spacing: -2%;
 
             @media (max-width: 1000px) {
                 margin-bottom: .5rem;
+                line-height: 1rem;
             }
         }
 
@@ -166,6 +179,12 @@ const carosuelItems = [
         }
 
         .text {
+            line-height: 1.9rem;
+
+            @media (max-width: 1000px) {
+                line-height: 1rem;
+            }
+
             .title {
                 font-size: clamp(0.625rem, 0.3676rem + 1.4706vw, 2.1875rem);
 
@@ -186,9 +205,34 @@ const carosuelItems = [
     }
 }
 
-button {
-    width: 15px;
-    height: 15px;
-    background-color: #FCFCF9;
+.pagination {
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5rem;
+    gap: .4rem;
+
+    &__btn {
+        width: 15px;
+        height: 15px;
+        cursor: pointer;
+
+        svg {
+            background-color: $bgc-white;
+            color: #EAEAEA;
+
+            path {
+                transition: color .2s;
+            }
+        }
+
+        svg:hover path {
+            color: $primary-color;
+        }
+    }
+
+    &__items {
+        width: fit-content;
+    }
 }
 </style>
