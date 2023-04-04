@@ -4,8 +4,20 @@ import { Pagination, Autoplay } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import carouselImg from '../assets/carousel.svg'
+import { ref, watch } from 'vue';
 
-const modules = [Pagination, Autoplay];
+
+const isClicked = ref(false)
+const swiperRef = ref(null)
+
+const onSwiper = (swiper) => {
+    swiperRef.value = swiper
+}
+watch(isClicked, () => {
+    swiperRef.value.autoplay.stop()
+})
+
+
 
 const carosuelItems = [
     {
@@ -57,12 +69,14 @@ const carosuelItems = [
         linkPath: "https://www.google.pl"
     }
 ]
+
 </script>
 
 <template>
     <section class="news space-100">
-        <swiper :autoplay="{ delay: 4500, disableOnInteraction: false, }" :loop="true" :pagination="{ clickable: true, }"
-            :modules="modules">
+        <swiper @swiper="onSwiper" :autoplay="{ delay: 4500, disableOnInteraction: false }" :loop="true" :pagination="{
+            clickable: true
+        }" :modules="[Pagination, Autoplay]">
             <swiper-slide class="news__slide" v-for="slide in carosuelItems" :key="slide.id">
                 <img class="news__img" :src="slide.img" :alt="slide.imgAlt">
                 <div class="news__title">
@@ -82,8 +96,11 @@ const carosuelItems = [
                         </svg></a>
                 </div>
             </swiper-slide>
-            <button style="padding: 20px;" @click="isClicked.value = true">gowno</button>
-
+            <span @click="isClicked = !isClicked">
+                <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5 10.0002L0.500001 20.0002L0.500002 0.000167853L17.5 10.0002Z" fill="#FDBE4F" />
+                </svg>
+            </span>
         </swiper>
     </section>
 </template>
@@ -167,5 +184,11 @@ const carosuelItems = [
             height: clamp(1.5625rem, 1.3566rem + 1.1765vw, 2.8125rem);
         }
     }
+}
+
+button {
+    width: 15px;
+    height: 15px;
+    background-color: #FCFCF9;
 }
 </style>

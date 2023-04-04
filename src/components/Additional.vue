@@ -42,6 +42,7 @@ import tiger from '../assets/tiger.svg';
 <style lang="scss" scoped>
 .additional {
     position: relative;
+    overflow: visible;
 
     &__hand {
         width: clamp(9.375rem, -8.4821rem + 35.7143vw, 34.375rem);

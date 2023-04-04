@@ -23,7 +23,7 @@
     text-transform: uppercase;
 
     &__title {
-        font-family: 'MADEOuterSans';
+        font-family: 'MADEOuterSans', sans-serif;
         color: $text-black;
         font-size: clamp(2.1875rem, 1.4939rem + 3.9634vw, 6.25rem);
         margin-bottom: 5rem;

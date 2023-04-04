@@ -27,7 +27,7 @@ const descriptions = [
 <template>
     <section class="descriptions space-150">
         <div class="descriptions__aside">
-            <p class="descriptions__title">CO ROBIMY <br /> WYJĄTKOWO?</p>
+            <h2 class="descriptions__title">CO ROBIMY <br /> WYJĄTKOWO?</h2>
         </div>
         <div class="descriptions__container padding-left">
             <p class="descriptions__desc text-desc">Na rynku jest wiele szkół tatuażu i kursów doszkalających. Z radością i
@@ -88,8 +88,6 @@ const descriptions = [
         width: 100%;
         font-weight: $semibold-weight;
     }
-
-
 }
 
 .description {
@@ -103,6 +101,11 @@ const descriptions = [
 
         @media(max-width:1400px) {
             flex-direction: column;
+        }
+
+        @media (max-width:576px) {
+            margin-top: 3.75rem;
+            padding-top: 1.5rem;
         }
     }
 
