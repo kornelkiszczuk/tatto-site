@@ -82,6 +82,8 @@ const carosuelItems = [
                         </svg></a>
                 </div>
             </swiper-slide>
+            <button style="padding: 20px;" @click="isClicked.value = true">gowno</button>
+
         </swiper>
     </section>
 </template>
