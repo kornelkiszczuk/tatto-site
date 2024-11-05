@@ -13,3 +13,5 @@ This project is a responsive website for a tattoo school, built using Vue.js and
 - **SCSS:** A preprocessor scripting language that is interpreted or compiled into Cascading Style Sheets (CSS).
 - **Vue Libraries:** Utilized various libraries to enhance functionality and user interaction.
 
+## Live Demo
+You can view the live version of the website at [tatto-site.vercel.app](https://tatto-site.vercel.app).
