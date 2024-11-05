@@ -13,7 +13,3 @@ This project is a responsive website for a tattoo school, built using Vue.js and
 - **SCSS:** A preprocessor scripting language that is interpreted or compiled into Cascading Style Sheets (CSS).
 - **Vue Libraries:** Utilized various libraries to enhance functionality and user interaction.
 
-## Installation
-
-To run this project locally, follow these steps:
-
