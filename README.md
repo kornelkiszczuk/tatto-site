@@ -1,7 +1,19 @@
-# Vue 3 + Vite
+# Tattoo School Website
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Description
+This project is a responsive website for a tattoo school, built using Vue.js and SCSS. The site showcases the artistic vibe of the school and offers an easy-to-navigate interface for potential students. 
 
-## Recommended IDE Setup
+## Features
+- **Responsive Design:** Optimized for various devices and screen sizes.
+- **Interactive Elements:** Enhanced user experience with interactive components.
+- **Custom Visual Solutions:** Modified visual elements to ensure a polished look, addressing incomplete designs from the original Figma mockup.
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Technologies Used
+- **Vue.js:** A progressive JavaScript framework for building user interfaces.
+- **SCSS:** A preprocessor scripting language that is interpreted or compiled into Cascading Style Sheets (CSS).
+- **Vue Libraries:** Utilized various libraries to enhance functionality and user interaction.
+
+## Installation
+
+To run this project locally, follow these steps:
+
